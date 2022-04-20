@@ -53,26 +53,26 @@ class EditProfle extends Component {
         const { name, email, password, fileSize } = this.state;
         const userId = this.props.match.params.userId;
         if(userId !== isAuthenticated().user._id){
-            this.setState({ error: "You are not authorized to do this !!", loading: false });
+            this.setState({ error: "¡No está autorizado a hacer esto!", loading: false });
             return false;
         }
 
         if (fileSize > 1000000) {
-            this.setState({ error: "File size should be less than 1 MB", loading: false });
+            this.setState({ error: "El tamaño del archivo debe ser inferior a 1 MB", loading: false });
             return false;
         }
 
         if (name.length === 0) {
-            this.setState({ error: "Name is required", loading: false });
+            this.setState({ error: "Se requiere el nombre", loading: false });
             return false;
         }
         //test regular expression with 'test' keyword
         if (!/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-            this.setState({ error: "Please enter a valid email address.", loading: false });
+            this.setState({ error: "Por favor, introduzca una dirección de correo electrónico válida.", loading: false });
             return false;
         }
         if (password.length >= 1 && password.length <= 5) {
-            this.setState({ error: "Password must be at least 6 characters long", loading: false });
+            this.setState({ error: "La contraseña debe tener al menos 6 caracteres", loading: false });
             return false;
         }
         return true;
@@ -117,7 +117,7 @@ class EditProfle extends Component {
     signupForm = (name, email, password, loading, about) => (
         <form>
             <div className="form-group">
-                <label className="text-muted">Profile Photo</label>
+                <label className="text-muted">Foto de perfil</label>
                 <input
                     onChange={this.handleChange}
                     name="photo"
@@ -127,7 +127,7 @@ class EditProfle extends Component {
                 />
             </div>
             <div className="form-group">
-                <label className="text-muted">Name</label>
+                <label className="text-muted">Nombre</label>
                 <input
                     onChange={this.handleChange}
                     name="name"
@@ -137,7 +137,7 @@ class EditProfle extends Component {
                 />
             </div>
             <div className="form-group">
-                <label className="text-muted">Email</label>
+                <label className="text-muted">Correo electrónico</label>
                 <input
                     onChange={this.handleChange}
                     type="email"
@@ -147,7 +147,7 @@ class EditProfle extends Component {
                 />
             </div>
             <div className="form-group">
-                <label className="text-muted">About</label>
+                <label className="text-muted">Sobre</label>
                 <textarea
                     onChange={this.handleChange}
                     type="text"
@@ -157,7 +157,7 @@ class EditProfle extends Component {
                 />
             </div>
             <div className="form-group">
-                <label className="text-muted">Password</label>
+                <label className="text-muted">Contraseña</label>
                 <input
                     onChange={this.handleChange}
                     type="password"
@@ -167,7 +167,7 @@ class EditProfle extends Component {
                 />
             </div>
             
-            <button onClick={this.clickSubmit} className="btn btn-raised btn-primary">Update</button>
+            <button onClick={this.clickSubmit} className="btn btn-raised btn-primary">Actualizar</button>
         </form>
     );
 
@@ -181,7 +181,7 @@ class EditProfle extends Component {
 
         return (
             <div className="container">
-                <h2 className="mt-5 mb-5">Edit Profile</h2>
+                <h2 className="mt-5 mb-5">Editar perfil</h2>
                 <div className="alert alert-danger" style={{ display: error ? "" : "none" }}>
                     {error}
                 </div>

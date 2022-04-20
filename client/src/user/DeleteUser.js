@@ -29,11 +29,11 @@ class DeleteUser extends Component {
 
     deleteConfirmed = () => {
         confirmAlert({
-            title: 'Are you sure ?',
-            message: 'you want to delete this account.',
+            title: '¿Está seguro?',
+            message: 'desea eliminar esta cuenta.',
             buttons: [
                 {
-                    label: 'Yes',
+                    label: 'Sí',
                     onClick: () => this.deleteAccount()
                 },
                 {

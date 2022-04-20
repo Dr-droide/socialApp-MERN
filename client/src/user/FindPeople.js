@@ -48,7 +48,7 @@ class FindPeople extends Component {
                     this.setState({
                         users: toFollow,
                         open: true,
-                        followMessage: `Following ${user.name}`,
+                        followMessage: `Siguiendo a ${user.name}`,
                         loading: false
                     })
                 }
@@ -75,7 +75,7 @@ class FindPeople extends Component {
                         <Link
                             to={`/user/${user._id}`}
                             className="card-link btn btn-raised btn-primary">
-                            View Profile
+                            Ver perfil
                         </Link>
                         <button style={{ 
                                         background: "#56ccf2", 
@@ -83,7 +83,7 @@ class FindPeople extends Component {
                                         background: "linear-gradient(to left, #56ccf2, #2f80ed)",
                                         padding: "10px"
                                     }} onClick={() => this.clickFollow(user, i)} className="btn btn-raised btn-success pull-right">
-                            Follow
+                            Seguir
                         </button>
                     </div>
                 </div>
@@ -96,7 +96,7 @@ class FindPeople extends Component {
         const {users, open, followMessage, loading} = this.state;
         return(
             <div className="container">
-                <h2 className="mt-5 mb-5">Find People</h2>
+                <h2 className="mt-5 mb-5">Busca personas</h2>
                 {open && (
                     <div className="alert alert-success text-center">
                         {followMessage}

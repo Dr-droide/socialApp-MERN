@@ -26,7 +26,7 @@ class ForgotPassword extends Component {
         const { message, error } = this.state;
         return (
             <div className="container">
-                <h2 className="mt-5 mb-5">Ask for Password Reset</h2>
+                <h2 className="mt-5 mb-5">Pedir el restablecimiento de la contraseña</h2>
 
                 <div className="alert alert-danger" style={{ display: error ? "" : "none" }}>
                     {error}
@@ -40,7 +40,7 @@ class ForgotPassword extends Component {
                         <input
                             type="email"
                             className="form-control"
-                            placeholder="Your email address"
+                            placeholder="Correo electrónico"
                             value={this.state.email}
                             name="email"
                             onChange={e =>
@@ -57,7 +57,7 @@ class ForgotPassword extends Component {
                         onClick={this.forgotPasswordFunction}
                         className="btn btn-raised btn-primary"
                     >
-                        Send Password Rest Link
+                        Enviar enlace de descanso de la contraseña
                     </button>
                 </form>
             </div>

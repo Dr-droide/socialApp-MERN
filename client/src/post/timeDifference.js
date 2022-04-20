@@ -8,22 +8,22 @@ export const timeDifference = (current, previous) => {
     var elapsed = current - previous;
 
     if (elapsed < msPerMinute) {
-        return Math.round(elapsed/1000) + ' seconds ago';   
+        return 'Hace ' + Math.round(elapsed/1000) + ' segundos';   
     }
     else if (elapsed < msPerHour) {
-        return Math.round(elapsed/msPerMinute) + ' minutes ago';   
+        return 'Hace ' + Math.round(elapsed/msPerMinute) + ' minutos';   
     }
     else if (elapsed < msPerDay ) {
-        return Math.round(elapsed/msPerHour ) + ' hours ago';   
+        return 'Hace ' + Math.round(elapsed/msPerHour ) + ' horas';   
     }
     else if (elapsed < msPerMonth) {
-        return Math.round(elapsed/msPerDay) + ' days ago';   
+        return 'Hace' + Math.round(elapsed/msPerDay) + ' días';   
     }
     else if (elapsed < msPerYear) {
-        return Math.round(elapsed/msPerMonth) + ' months ago';   
+        return 'Hace' + Math.round(elapsed/msPerMonth) + ' mes';   
     }
     else {
-        return 'approximately ' + Math.round(elapsed/msPerYear ) + ' years ago';   
+        return 'Hace aproximadamente ' + Math.round(elapsed/msPerYear ) + ' años';   
     }
 };
 

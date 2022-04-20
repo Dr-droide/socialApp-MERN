@@ -93,11 +93,11 @@ class SinglePost extends Component {
 
     deleteConfirmed = () => {
         confirmAlert({
-            title: 'Are you sure ?',
-            message: 'you want to delete this post.',
+            title: '¿Está seguro?',
+            message: 'quieres borrar este post.',
             buttons: [
                 {
-                    label: 'Yes',
+                    label: 'Sí',
                     onClick: () => this.deletePost()
                 },
                 {
@@ -110,7 +110,7 @@ class SinglePost extends Component {
 
     renderPost = (post) => {
         const posterId = post.postedBy ? post.postedBy._id : "";
-        const posterName = post.postedBy ? post.postedBy.name : " Unknown";
+        const posterName = post.postedBy ? post.postedBy.name : " Desconocido";
 
         const { like, likes, redirectToSignin, redirectToHome, comments } = this.state;
 
@@ -164,7 +164,7 @@ class SinglePost extends Component {
                             <i className="far fa-comments ml-3"></i> 
                         </h3>
                     )}
-                    <span style={{fontSize: "20px"}} className="ml-3" >{likes} Likes </span>
+                    <span style={{fontSize: "20px"}} className="ml-3" >{likes} Me gusta </span>
                 
                 <div className="card-body">
                     <h5 className="card-title">{post.title}</h5>
@@ -172,17 +172,17 @@ class SinglePost extends Component {
                     <Link
                         to={`/`}
                         className="btn btn-raised btn-sm btn-primary mr-5">
-                        Back to posts
+                        Volver a los puestos
                     </Link>
                     {isAuthenticated().user && isAuthenticated().user._id === post.postedBy._id && (
                         <>
                             <Link
                                 to={`/post/edit/${post._id}`}
                                 className="btn btn-raised btn-sm btn-warning mr-5">
-                                    Edit Post
+                                    Editar el puesto
                             </Link>
                             <button onClick={this.deleteConfirmed} className="btn btn-raised btn-sm btn-danger">
-                                Delete Post
+                            Borrar el puesto
                             </button>
                         </>
                     )}

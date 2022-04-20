@@ -1,2 +1,1 @@
-web: npm server
-worker: npm client
+web: Ework.bat

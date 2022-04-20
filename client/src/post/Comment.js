@@ -32,13 +32,13 @@ class Comment extends Component {
         const { text } = this.state;
         if (!text.length > 0) {
             this.setState({
-                error: "Comment cannot be empty"
+                error: "El comentario no puede estar vacío"
             })
             return false
         }
         if (text.length > 150) {
             this.setState({
-                error: "Comment cannot be more than 150 characters long"
+                error: "El comentario no puede tener más de 150 caracteres"
             })
             return false
         }
@@ -49,7 +49,7 @@ class Comment extends Component {
         e.preventDefault();
         if (!isAuthenticated()) {
             this.setState({
-                error: "Please Signin first to leave a comment"
+                error: "Por favor, regístrese primero para dejar un comentario"
             });
             return false
         }
@@ -97,11 +97,11 @@ class Comment extends Component {
 
     deleteConfirmed = (comment) => {
         confirmAlert({
-            title: 'Are you sure ?',
-            message: 'you want to delete this comment.',
+            title: '¿Está seguro?',
+            message: 'quieres borrar este comentario.',
             buttons: [
                 {
-                    label: 'Yes',
+                    label: 'Sí',
                     onClick: () => this.deleteComment(comment)
                 },
                 {
@@ -141,13 +141,13 @@ class Comment extends Component {
                                     type="text"
                                     onChange={this.handleChange}
                                     value={text}
-                                    placeholder="Leave a comment..."
+                                    placeholder="Deja un comentario..."
                                 />
                                 <div>
                                     <button type="button" onClick={() => this.setState({ showPicker: !showPicker })} className="btn btn-sm btn-primary"><i style={{fontSize: "20px"}} className="far fa-smile"></i></button>
                                 </div>
                             </div>
-                            <button type="submit" className="btn btn-raised btn-sm btn-info pull-right mt-3 mb-3">Add comment</button>                
+                            <button type="submit" className="btn btn-raised btn-sm btn-info pull-right mt-3 mb-3">Añadir un comentario</button>                
                         </form>
                         {showPicker ? <Picker onEmojiClick={this.onEmojiClick} /> : ""}
                         <div className="alert alert-danger mt-5" style={{ display: error ? "" : "none" }}>

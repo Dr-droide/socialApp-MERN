@@ -25,19 +25,19 @@ class Signup extends Component {
         let userDay = e.target.value.toLowerCase();
         let dayCount;
 
-        if (userDay === "sunday") {
+        if (userDay === "domingo") {
             dayCount = 0;
-        } else if (userDay === "monday") {
+        } else if (userDay === "lunes") {
             dayCount = 1;
-        } else if (userDay === "tuesday") {
+        } else if (userDay === "martes") {
             dayCount = 2;
-        } else if (userDay === "wednesday") {
+        } else if (userDay === "miércoles") {
             dayCount = 3;
-        } else if (userDay === "thursday") {
+        } else if (userDay === "jueves") {
             dayCount = 4;
-        } else if (userDay === "friday") {
+        } else if (userDay === "viernes") {
             dayCount = 5;
-        } else if (userDay === "saturday") {
+        } else if (userDay === "sabado") {
             dayCount = 6;
         }
 
@@ -87,7 +87,7 @@ class Signup extends Component {
         } else {
             this.setState({
                 loading: false,
-                error: "What day is today? Please write a correct answer!"
+                error: "¿Qué día es hoy? Por favor, escribe la respuesta correcta!"
             });
         }
         
@@ -97,7 +97,7 @@ class Signup extends Component {
     signupForm = (name, email, password, loading, recaptcha) => (
         <form style={{ display: loading ? "none" : "" }}>
             <div className="form-group">
-                <label className="text-muted">Name</label>
+                <label className="text-muted">Nombre</label>
                 <input 
                     onChange={this.handleChange} 
                     name="name" 
@@ -107,7 +107,7 @@ class Signup extends Component {
                 />
             </div>
             <div className="form-group">
-                <label className="text-muted">Email</label>
+                <label className="text-muted">Correo electrónico</label>
                 <input 
                     onChange={this.handleChange} 
                     type="email" 
@@ -117,7 +117,7 @@ class Signup extends Component {
                 />
             </div>
             <div className="form-group">
-                <label className="text-muted">Password</label>
+                <label className="text-muted">Contraseña</label>
                 <input 
                     onChange={this.handleChange} 
                     type="password" 
@@ -128,7 +128,7 @@ class Signup extends Component {
             </div>
             <div className="form-group">
                 <label className="text-muted">
-                    {recaptcha ? "Captcha success. You got it!" : "What day is today?"}
+                    {recaptcha ? "Captcha success. You got it!" : "¿Qué día es hoy?"}
                 </label>
                 <input
                     onChange={this.recaptchaHandler}
@@ -136,7 +136,7 @@ class Signup extends Component {
                     className="form-control"
                 />
             </div>
-            <button onClick={this.clickSubmit} className="btn btn-raised btn-primary">Submit</button>
+            <button onClick={this.clickSubmit} className="btn btn-raised btn-primary">Registrarse</button>
         </form>
     );
 
@@ -145,7 +145,7 @@ class Signup extends Component {
         const { name, email, password, error, open, loading, recaptcha } = this.state;
         return (
             <div className="container">
-                <h2 className="mt-5 mb-5">Signup</h2>
+                <h2 className="mt-5 mb-5">Registrarse</h2>
                 <SocialLogin for="signup" />
                 <hr />
                 <p className="text-center text-muted" style={{fontSize: "24px"}} >OR</p>
@@ -155,7 +155,7 @@ class Signup extends Component {
                     {error}
                 </div>
                 <div className="alert alert-info" style={{ display: open ? "" : "none" }}>
-                    New account is successfully created. Please <Link to='/signin'>Sign In</Link>.
+                La nueva cuenta se ha creado con éxito. Por favor, <Link to='/signin'>Iniciar sesión</Link>.
                 </div>
                 {this.signupForm(name, email, password, loading, recaptcha)}
                 { loading ? (

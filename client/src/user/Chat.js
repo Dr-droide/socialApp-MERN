@@ -221,7 +221,7 @@ class Chat extends Component {
                                         }}
                                     >
                                         <div className="selected-user">
-                                            <span>To: <span className="name">{reciever.name}</span></span>
+                                            <span>Para: <span className="name">{reciever.name}</span></span>
                                         </div>
                                         <ScrollToBottom className="chat-container">
                                             <div>
@@ -240,7 +240,7 @@ class Chat extends Component {
                                                         <input
                                                             type="text"
                                                             className="form-control"
-                                                            placeholder="Your message..."
+                                                            placeholder="Aa"
                                                             value={this.state.message}
                                                             name="message"
                                                             onChange={e =>
@@ -258,7 +258,7 @@ class Chat extends Component {
                                                     type="submit"
                                                     className="btn btn-raised btn-primary pull-right"
                                                 >
-                                                    Send
+                                                    Enviar
                                                 </button>
                                             </form>
                                             {showPicker ? <Picker onEmojiClick={this.onEmojiClick} /> : ""}

@@ -31,19 +31,19 @@ class NewPost extends Component {
     isValid = () => {
         const { title, body, fileSize, photo } = this.state;
         if (fileSize > 1000000) {
-            this.setState({ error: "File size should be less than 1 MB", loading: false });
+            this.setState({ error: "El tamaño del archivo debe ser inferior a 1 MB", loading: false });
             return false;
         }
         if(photo.length === 0){
-            this.setState({ error: "Photo is required", loading: false });
+            this.setState({ error: "Se necesita una foto", loading: false });
             return false;
         }
         if (title.length === 0) {
-            this.setState({ error: "Title is required", loading: false });
+            this.setState({ error: "Se requiere un título", loading: false });
             return false;
         }
         if (body.length === 0) {
-            this.setState({ error: "Body is required", loading: false });
+            this.setState({ error: "Se requiere una descripción", loading: false });
             return false;
         }
         return true;
@@ -88,7 +88,7 @@ class NewPost extends Component {
     newPostForm = (title, body) => (
         <form>
             <div className="form-group">
-                <label className="text-muted">Photo</label>
+                <label className="text-muted">Foto</label>
                 <input
                     onChange={this.handleChange}
                     name="photo"
@@ -98,7 +98,7 @@ class NewPost extends Component {
                 />
             </div>
             <div className="form-group">
-                <label className="text-muted">Title</label>
+                <label className="text-muted">Título</label>
                 <input
                     onChange={this.handleChange}
                     name="title"
@@ -108,7 +108,7 @@ class NewPost extends Component {
                 />
             </div>
             <div className="form-group">
-                <label className="text-muted">Body</label>
+                <label className="text-muted">Descripción</label>
                 <textarea
                     onChange={this.handleChange}
                     type="text"
@@ -118,7 +118,7 @@ class NewPost extends Component {
                 />
             </div>
 
-            <button onClick={this.clickSubmit} className="btn btn-raised btn-primary">Create Post</button>
+            <button onClick={this.clickSubmit} className="btn btn-raised btn-primary">Publicar</button>
         </form>
     );
 
@@ -131,7 +131,7 @@ class NewPost extends Component {
 
         return (
             <div className="container">
-                <h2 className="mt-5 mb-5">Create a new post</h2>
+                <h2 className="mt-5 mb-5">Crear publicación</h2>
                 <div className="alert alert-danger" style={{ display: error ? "" : "none" }}>
                     {error}
                 </div>

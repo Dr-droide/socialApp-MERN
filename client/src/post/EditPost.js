@@ -50,24 +50,24 @@ class EditProfle extends Component {
     isValid = () => {
         const { title, body, fileSize, photo, postedBy } = this.state;
         if(postedBy !== isAuthenticated().user._id){
-            this.setState({ error: "You are not authorized to do this !!", loading: false });
+            this.setState({ error: "¡No está autorizado a hacer esto!", loading: false });
             return false;
         }
 
         if (fileSize > 200000) {
-            this.setState({ error: "File size should be less than 200 KB", loading: false });
+            this.setState({ error: "El tamaño del archivo debe ser inferior a 200 KB", loading: false });
             return false;
         }
         if(photo.length === 0){
-            this.setState({ error: "Photo is required", loading: false });
+            this.setState({ error: "Se necesita una foto", loading: false });
             return false;
         }
         if (title.length === 0) {
-            this.setState({ error: "Title is required", loading: false });
+            this.setState({ error: "Se requiere un título", loading: false });
             return false;
         }
         if (body.length === 0) {
-            this.setState({ error: "Body is required", loading: false });
+            this.setState({ error: "Se requiere una descripción", loading: false });
             return false;
         }
         return true;
@@ -111,7 +111,7 @@ class EditProfle extends Component {
     editPostForm = (title, body) => (
         <form>
             <div className="form-group">
-                <label className="text-muted">Photo</label>
+                <label className="text-muted">Foto</label>
                 <input
                     onChange={this.handleChange}
                     name="photo"
@@ -121,7 +121,7 @@ class EditProfle extends Component {
                 />
             </div>
             <div className="form-group">
-                <label className="text-muted">Title</label>
+                <label className="text-muted">Título</label>
                 <input
                     onChange={this.handleChange}
                     name="title"
@@ -131,7 +131,7 @@ class EditProfle extends Component {
                 />
             </div>
             <div className="form-group">
-                <label className="text-muted">Body</label>
+                <label className="text-muted">Descripción</label>
                 <textarea
                     onChange={this.handleChange}
                     type="text"
@@ -141,7 +141,7 @@ class EditProfle extends Component {
                 />
             </div>
 
-            <button onClick={this.clickSubmit} className="btn btn-raised btn-primary">Update Post</button>
+            <button onClick={this.clickSubmit} className="btn btn-raised btn-primary">Actualizar la publicación</button>
         </form>
     );
 
@@ -154,7 +154,7 @@ class EditProfle extends Component {
 
         return(
             <div className="container"> 
-                <h2 className="mt-5 mb-5">Edit Post - {title}</h2>
+                <h2 className="mt-5 mb-5">Actualizar la publicación - {title}</h2>
                 <div className="alert alert-danger" style={{ display: error ? "" : "none" }}>
                     {error}
                 </div>

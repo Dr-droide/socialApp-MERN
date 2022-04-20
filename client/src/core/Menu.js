@@ -14,7 +14,7 @@ const isActive = (history, path) => {
 const Menu = (props) => (
     <nav className="navbar navbar-expand-lg navbar-dark"  
         style={{ 
-            background: "#007991", 
+            background: "#0C60DF", 
             paddingTop: "15px",
             paddingBottom: "0",
             marginBottom: "50px"
@@ -31,7 +31,7 @@ const Menu = (props) => (
         <ul className="navbar-nav ml-auto">
             <li className="nav-item ">
                 <Link className="nav-link" style={isActive(props.history, "/")} to='/' >
-                <i className="fas fa-home mr-1"></i>Home
+                <i className="fas fa-home mr-1"></i>Inicio
                 </Link>
             </li>
             {!isAuthenticated() && (
@@ -43,12 +43,12 @@ const Menu = (props) => (
                     </li> */}
                     <li className="nav-item">
                         <Link className="nav-link" style={isActive(props.history, "/signin")} to='/signin' >
-                        <i className="fas fa-sign-in-alt mr-1"></i>Sign In
+                        <i className="fas fa-sign-in-alt mr-1"></i>Iniciar sesión
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" style={isActive(props.history, "/signup")} to='/signup' >
-                            <i className="fas fa-user-plus mr-1"></i>Sign Up
+                            <i className="fas fa-user-plus mr-1"></i>Registrarse
                         </Link>
                     </li>
                 </>
@@ -61,7 +61,7 @@ const Menu = (props) => (
                             to={'/findpeople'}
                             style={isActive(props.history, '/findpeople')}
                         >
-                            <i className="fas fa-users mr-1"></i>Find People
+                            <i className="fas fa-users mr-1"></i>Busca personas
                         </Link>
                     </li> 
 
@@ -71,19 +71,19 @@ const Menu = (props) => (
                             to={'/post/create'}
                             style={isActive(props.history, '/post/create')}
                         >
-                            <i className="fas fa-plus mr-1"></i>Create Post
+                            <i className="fas fa-plus mr-1"></i>Publicar
                         </Link>
                     </li> 
                     <div className="dropdown">
                         <button style={{color: "#fff"}} className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i className="fas fa-user-cog mr-1"></i>{`${isAuthenticated().user.name}'s profile`}
+                        <i className="fas fa-user-cog mr-1"></i>{`${isAuthenticated().user.name}`}
                         </button>
                         <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <Link 
                                 className="dropdown-item" 
                                 to={`/user/${isAuthenticated().user._id}`}
                             >
-                                <i className="fas fa-user mr-1"></i>Your Profile
+                                <i className="fas fa-user mr-1"></i>Ver tu Perfil
                             </Link>
                             <Link
                                 className="dropdown-item"
@@ -96,7 +96,7 @@ const Menu = (props) => (
                                 style={{ cursor: "pointer" }}
                                 onClick={() => signout(() => props.history.push('/'))}
                             >
-                                <i className="fas fa-sign-out-alt mr-1"></i>Sign Out
+                                <i className="fas fa-sign-out-alt mr-1"></i>Salir
                             </span>
                         </div>
                     </div>

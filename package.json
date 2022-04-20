@@ -6,7 +6,6 @@
         "node": "16.x"
     },
     "scripts": {
-        "serveur": "cd server && node app.js",
-        "client": "cd client && npm start"
+        "start": "start cmd /k \"cd client & npm start\" && cd server && node app.js"
       }
 }

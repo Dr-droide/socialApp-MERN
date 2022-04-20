@@ -85,13 +85,13 @@ class Chat extends Component {
                                             <ul className="users" style={{ display: loading ? "none" : "" }} >
                                                 { chatList.length === 0 ? (
                                                     <p className="text-center p-2">
-                                                        <strong>No chats found. </strong>
+                                                        <strong>No se han encontrado chats. </strong>
                                                         <br />
-                                                        Go to someone's profile from 
-                                                        <Link to="/findpeople"> Find people </Link>
-                                                        tab or from your 
-                                                        <Link to={`/user/${isAuthenticated().user._id}`} > followers/following </Link>
-                                                        tab and click message button to start chatting.
+                                                        Ir al perfil de alguien desde 
+                                                        <Link to="/findpeople"> Busca personas </Link>
+                                                        o desde su 
+                                                        <Link to={`/user/${isAuthenticated().user._id}`} > seguidores/siguiendo </Link>
+                                                        y haz clic en el botón de mensajes para empezar a chatear.
                                                     </p>
                                                 ) : ("") }
                                                 { chatList.map((user, i) => (

@@ -33,7 +33,7 @@ class ResetPassword extends Component {
         const { message, error } = this.state;
         return (
             <div className="container">
-                <h2 className="mt-5 mb-5">Reset your Password</h2>
+                <h2 className="mt-5 mb-5">Restablecer la contraseña</h2>
 
                 <div className="alert alert-danger" style={{ display: error ? "" : "none" }}>
                     {error}
@@ -46,7 +46,7 @@ class ResetPassword extends Component {
                         <input
                             type="password"
                             className="form-control"
-                            placeholder="Your new password"
+                            placeholder="Nueva contraseña"
                             value={this.state.newPassword}
                             name="newPassword"
                             onChange={e =>
@@ -63,7 +63,7 @@ class ResetPassword extends Component {
                         onClick={this.resetPassword}
                         className="btn btn-raised btn-primary"
                     >
-                        Reset Password
+                        Restablecer contraseña
                     </button>
                 </form>
             </div>

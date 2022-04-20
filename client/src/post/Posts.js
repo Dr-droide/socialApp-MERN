@@ -61,9 +61,9 @@ class Posts extends Component {
                 >
                     { posts.map((post, i) => {
                         const posterId = post.postedBy ? post.postedBy._id : "";
-                        const posterName = post.postedBy ? post.postedBy.name : " Unknown";
+                        const posterName = post.postedBy ? post.postedBy.name : " Desconocido";
                         return (
-                            <div key={i} className="card col-md-12 mb-5" style={{ padding: "0" }} >
+                            <div key={i} className="card col-md-12 mb-5" style={{ padding: "0", background: "#0C60DF", borderRadius: "5%" }} >
                                 <div className="card-header">
                                     <img
                                         className="mb-1 mr-2"
@@ -76,7 +76,7 @@ class Posts extends Component {
                                         {posterName}
                                     </Link>
                                     <p
-                                        style={{ marginBottom: "0" }}
+                                        style={{ marginBottom: "0", color: "white" }}
                                         className="pull-right mt-2"
                                     >
                                         <span className="ml-2">
@@ -97,7 +97,7 @@ class Posts extends Component {
                                         }}
                                     />
                                 </Link>
-                                <div className="card-body">
+                                <div className="card-body" style={{ color: "white" }}>
                                     <h5 className="card-title">{post.title}</h5>
                                     <p className="card-text">{post.body}</p>
                                     <Link

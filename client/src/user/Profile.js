@@ -110,9 +110,9 @@ class Profile extends Component {
     renderProfile = () => {
         const { user, following, posts } = this.state;
         const photoUrl = user._id ? `${process.env.REACT_APP_API_URL}/user/photo/${user._id}?${new Date().getTime()}` : DefaultProfile;
-        let followingBadge = <p style={{ marginBottom: "0" }}><span className="badge badge-pill badge-primary">{user.following.length}</span> Following</p>
-        let followersBadge = <p style={{ marginBottom: "0" }}><span className="badge badge-pill badge-success">{user.followers.length}</span> Followers</p>
-        let postsBadge = <p style={{ marginBottom: "0" }}><span className="badge badge-pill badge-warning">{posts.length}</span> Posts</p>
+        let followingBadge = <p style={{ marginBottom: "0" }}><span className="badge badge-pill badge-primary">{user.following.length}</span> Siguiendo</p>
+        let followersBadge = <p style={{ marginBottom: "0" }}><span className="badge badge-pill badge-success">{user.followers.length}</span> Seguidores</p>
+        let postsBadge = <p style={{ marginBottom: "0" }}><span className="badge badge-pill badge-warning">{posts.length}</span> Publicacións</p>
         return <div className="user-profile">
             <div className="row">
                 <div className="col-md-4">
@@ -137,7 +137,7 @@ class Profile extends Component {
                                             className="btn btn-sm btn-raised btn-primary"
                                             to={`/post/create`}
                                         >
-                                            Create Post
+                                            Publicar
                                         </Link>
                                     </div>
                                     <div className="col-md-4 col-xs-6">
@@ -145,7 +145,7 @@ class Profile extends Component {
                                         className="btn btn-sm btn-raised btn-dark"
                                             to={`/user/edit/${user._id}`}
                                         >
-                                            Edit Profile
+                                            Editar perfil
                                         </Link>
                                     </div>
 
@@ -161,7 +161,7 @@ class Profile extends Component {
                                             className="btn btn-sm btn-raised btn-success ml-3"
                                             to={`/chat/${isAuthenticated().user._id}/${user._id}`}
                                         >
-                                            Message
+                                            Mensaje
                                         </Link>
                                     </div>
                                     <div className="col-md-6 col-xs-6">
@@ -172,14 +172,14 @@ class Profile extends Component {
                             
                         </div>
                         <div className="section">
-                            <h3>About Me</h3>
+                            <h3>Sobre mí</h3>
                             <p>{user.about}</p>
                         </div>
                         <div className="section">
-                            <h3>Statistics</h3>
-                            <p><span className="badge badge-pill badge-primary">{user.following.length}</span> Following</p>
-                            <p><span className="badge badge-pill badge-success">{user.followers.length}</span> Followers</p>
-                            <p><span className="badge badge-pill badge-warning">{posts.length}</span> Posts</p>
+                            <h3>Estadísticas</h3>
+                            <p><span className="badge badge-pill badge-primary">{user.following.length}</span> Siguiendo</p>
+                            <p><span className="badge badge-pill badge-success">{user.followers.length}</span> Seguidores</p>
+                            <p><span className="badge badge-pill badge-warning">{posts.length}</span> Publicacións</p>
                         </div>
                     </div>
                 </div>

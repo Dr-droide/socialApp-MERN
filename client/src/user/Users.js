@@ -46,7 +46,7 @@ class Users extends Component {
                             <Link
                                 to={`/user/${user._id}`}
                                 className="btn btn-raised btn-sm btn-primary">
-                                View Profile
+                                Ver perfil
                             </Link>
                         </div>
                 </div>
@@ -59,7 +59,7 @@ class Users extends Component {
         const {users} = this.state;
         return(
             <div className="container">
-                <h2 className="mt-5 mb-5">Users</h2>
+                <h2 className="mt-5 mb-5">Usuarios</h2>
                 {this.renderUsers(users)}
             </div>
         );

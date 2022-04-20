@@ -16,9 +16,9 @@ class FollowProfileButton extends Component{
             <>
                 { !this.props.following ? 
                     (
-                        <button onClick={this.followClick} className="btn btn-sm btn-info btn-raised">Follow</button>
+                        <button onClick={this.followClick} className="btn btn-sm btn-info btn-raised">Seguir</button>
                     ) : (
-                        <button onClick={this.unfollowClick} className="btn btn-sm btn-raised btn-danger">UnFollow</button>
+                        <button onClick={this.unfollowClick} className="btn btn-sm btn-raised btn-danger">Dejar de seguir</button>
                     )
                 } 
             </>
