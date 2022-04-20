@@ -6,6 +6,6 @@
         "node": "16.x"
     },
     "scripts": {
-        "start": "Ework.bat"
+        "start": "start cmd /k \"cd client & npm start\" && cd server && node app.js"
       }
 }
