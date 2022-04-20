@@ -110,7 +110,7 @@ class Posts extends Component {
                                         }}
                                         to={`/post/${post._id}`}
                                         className="btn btn-raised btn-sm btn-primary">
-                                        Read More
+                                        SABER MAS <i class="fas fa-arrow-right"></i>
                                 </Link>
                                 </div>
 

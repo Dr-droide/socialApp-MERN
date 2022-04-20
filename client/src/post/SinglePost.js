@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { singlePost, remove, like, unlike } from './apiPost';
 import { Link, Redirect } from 'react-router-dom';
 import Loading from '../loading/Loading';
-import { isAuthenticated } from "../auth";
+import { isAuthenticated } from "../auth/Index";
 
 import Comment from './Comment';
 import DefaultProfile from '../images/avatar.jpg'

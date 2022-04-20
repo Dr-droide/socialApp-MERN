@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import io from "socket.io-client";
 
 import { read, getChats, getChatList } from './apiUser';
-import { isAuthenticated } from "../auth";
+import { isAuthenticated } from "../auth/Index";
 import ScrollToBottom from 'react-scroll-to-bottom';
 
 import '../css/Chat.css'

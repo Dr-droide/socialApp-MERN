@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { create } from "./apiPost";
-import { isAuthenticated } from "../auth";
+import { isAuthenticated } from "../auth/Index";
 import Loading from '../loading/Loading';
 import { Redirect } from 'react-router-dom';
 

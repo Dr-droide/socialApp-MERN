@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 
-import { signin, authenticate } from "../auth";
+import { signin, authenticate } from "../auth/Index";
 import SocialLogin from "./SocialLogin";
 
 import Loading from '../loading/Loading';

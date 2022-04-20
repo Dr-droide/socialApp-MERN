@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { isAuthenticated } from '../auth/index';
+import { isAuthenticated } from '../auth/Index';
 import { remove } from './apiUser';
-import { signout } from '../auth/index';
+import { signout } from '../auth/Index';
 import { Redirect } from 'react-router-dom';
 
 import { confirmAlert } from 'react-confirm-alert';

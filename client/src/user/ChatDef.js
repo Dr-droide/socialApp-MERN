@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { read, getChatList } from './apiUser';
-import { isAuthenticated } from "../auth";
+import { isAuthenticated } from "../auth/Index";
 
 import '../css/Chat.css'
 import DefaultProfile from '../images/avatar.jpg';

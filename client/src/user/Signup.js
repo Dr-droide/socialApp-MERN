@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { signup } from "../auth";
+import { signup } from "../auth/Index";
 
 import { Link } from 'react-router-dom';
 import Loading from '../loading/Loading';

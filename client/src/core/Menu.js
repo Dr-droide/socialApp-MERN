@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-import { signout, isAuthenticated } from "../auth";
+import { signout, isAuthenticated } from '../auth/Index';
 
 const isActive = (history, path) => {
     if (history.location.pathname === path) {
@@ -22,7 +22,7 @@ const Menu = (props) => (
         }}
     >
         <a className="navbar-brand" style={{ color: "white", fontFamily: 'Courgette, cursive' }} href="/">
-            <i className="fas fa-camera-retro mr-2"></i>SocialApp
+            <i className="fas fa-camera-retro mr-2"></i>Ework
         </a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>

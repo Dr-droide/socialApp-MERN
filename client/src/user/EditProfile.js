@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Loading from '../loading/Loading';
 
 import { read, update, updateUser } from "./apiUser";
-import { isAuthenticated } from "../auth";
+import { isAuthenticated } from "../auth/Index";
 import { Redirect } from 'react-router-dom';
 import DefaultProfile from '../images/avatar.jpg';
 
