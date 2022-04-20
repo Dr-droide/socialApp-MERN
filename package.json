@@ -4,5 +4,9 @@
     "description": "A sample Node.js app using Express 4",
     "engines": {
         "node": "16.x"
-    }
+    },
+    "scripts": {
+        "serveur": "cd server && node app.js",
+        "client": "cd client && npm start"
+      }
 }
