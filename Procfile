@@ -1,2 +1,2 @@
 web: npm server
-web: npm client
+worker: npm client
